@@ -2,6 +2,7 @@
 import { useParams } from "next/navigation";
 import React from "react";
 import "./poke.css";
+import Image from "next/image";
 
 interface PokemonDetail {
     name: string;
@@ -51,7 +52,7 @@ export default function Page() {
     return (
         <div className="pokemon-container">
             <h1 className="pokemon-name">{pokemonDetail.name}</h1>
-            <img 
+            <Image 
                 src={pokemonDetail.sprites.front_default} 
                 alt={pokemonDetail.name} 
                 className="pokemon-image" 

@@ -2,6 +2,8 @@
 import Link from "next/link";
 import React, { JSXElementConstructor } from "react";
 import "./pokes.css";
+
+
 interface PokemonList {
   count: number;
   next: string;
@@ -41,8 +43,8 @@ export default function Page() {
     if (pokemonData && pokemonData.results)
       return (
         <ul>
-          {pokemonData.results.map((p) => (
-            <li>
+          {pokemonData.results.map((p,index) => (
+            <li key={index}>
               <Link href={"/pokemon/" + p.name}>{p.name}</Link>
             </li>
           ))}
