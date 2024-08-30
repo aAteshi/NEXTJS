@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { JSXElementConstructor } from "react";
-
+import "./pokes.css";
 interface PokemonList {
   count: number;
   next: string;
